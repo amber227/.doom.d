@@ -76,4 +76,5 @@
 ;; they are implemented.
 
 (load! "+evil")
+(load! "+git")
 (load! "+modeline")
