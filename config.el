@@ -78,3 +78,4 @@
 (load! "+evil")
 (load! "+git")
 (load! "+modeline")
+(load! "+nix")
