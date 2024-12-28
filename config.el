@@ -80,3 +80,5 @@
 (load! "+modeline")
 (load! "+nix")
 (load! "+window")
+
+(setq doom-localleader-key "SPC r")
