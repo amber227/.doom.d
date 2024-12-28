@@ -79,3 +79,4 @@
 (load! "+git")
 (load! "+modeline")
 (load! "+nix")
+(load! "+window")
