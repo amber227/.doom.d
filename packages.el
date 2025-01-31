@@ -51,3 +51,4 @@
 (package! hydra)
 (package! direnv)
 (package! auctex)
+(package! fanyi)
