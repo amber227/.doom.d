@@ -83,3 +83,5 @@
 (load! "+tex")
 
 (setq doom-localleader-key "SPC r")
+
+(direnv-mode)
