@@ -12,6 +12,11 @@
   "c" #'evil-inner-curly
   "C" #'evilnc-inner-comment)
 
+(map! :map evil-motion-state-map
+  "j" #'evil-next-visual-line
+  "k" #'evil-previous-visual-line
+  "g j" #'evil-next-line
+  "g k" #'evil-previous-line)
 (map! :m
   "0" #'doom/backward-to-bol-or-indent)
 
