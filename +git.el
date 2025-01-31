@@ -14,6 +14,10 @@
   "g >" #'magit-status-truncated
   "g ," #'magit-file-dispatch)
 
+(map! :map evil-motion-state-map
+  "g ." #'magit-status-full
+  "g SPC" #'projectile-find-file)
+
 (map! :map magit-mode-map
   "." #'magit-status-toggle-truncated)
 
