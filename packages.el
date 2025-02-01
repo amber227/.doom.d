@@ -52,3 +52,4 @@
 (package! direnv)
 (package! auctex)
 (package! fanyi)
+(package! scihub :recipe (:host github :repo "emacs-pe/scihub.el"))
