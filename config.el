@@ -81,6 +81,7 @@
 (load! "+nix")
 (load! "+window")
 (load! "+tex")
+(load! "sioyek")
 
 (setq doom-localleader-key "SPC r")
 

@@ -2,4 +2,7 @@
 
 ;; https://github.com/ahrm/sioyek/discussions/347
 ;; Integrate with sioyek database, ~/.local/share/sioyek/{local, shared}.db sqlite files
-(sqlite-open "~/.local/share/sioyek/shared.db")
+;; (sqlite-open "~/.local/share/sioyek/shared.db")
+
+(with-eval-after-load 'org
+  (add-to-list 'org-file-apps '("\\.pdf\\'" . "sioyek %s")))
