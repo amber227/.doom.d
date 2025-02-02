@@ -53,3 +53,8 @@
 (package! auctex)
 (package! fanyi)
 (package! scihub :recipe (:host github :repo "emacs-pe/scihub.el"))
+
+;; Themes
+(package! catppuccin-theme)
+(package! everforest
+  :recipe (:host github :repo "Theory-of-Everything/everforest-emacs"))
