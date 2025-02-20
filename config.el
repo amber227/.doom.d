@@ -32,11 +32,24 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+;; (setq doom-theme 'everforest-hard-olddark)
 (setq doom-theme 'doom-tomorrow-night)
 ;; (setq catppuccin-flavor 'mocha) ;; or 'latte, 'macchiato, or 'mocha
 ;; (setq doom-theme 'catppuccin)
 ;; (add-hook 'server-after-make-frame-hook #'catppuccin-reload)
 
+;; (add-to-list 'default-frame-alist
+;;              '(font . "Monaco-10"))
+
+;; (add-to-list 'default-frame-alist
+;;              '(font . "RobotoMono Nerd Font-10"))
+
+;; (add-to-list 'default-frame-alist
+;;              '(font . "Fira Code-10"))
+
+(add-to-list 'default-frame-alist
+             '(font . "DejaVuSansM Nerd Font-10"))
+;;
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
