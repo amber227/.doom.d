@@ -18,4 +18,5 @@
 
 (defun nix-garbage-collect ()
   (interactive)
-  (compile "sudo nix-collect-garbage -d" t))
+  (compile "sudo nix-collect-garbage -d &\
+            nix-collect-garbage -d" t))
