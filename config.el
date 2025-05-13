@@ -99,6 +99,7 @@
 (load! "+tex")
 (load! "sioyek")
 (load! "splash")
+(load! "templates")
 
 (setq doom-localleader-key "SPC r")
 
