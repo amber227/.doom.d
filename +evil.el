@@ -47,3 +47,16 @@ Similar to Vim's `ze'."
 (map! :m "ze" 'hscroll-cursor-right)
 (setq hscroll-margin 0
       hscroll-step 1)
+
+;; https://github.com/doomemacs/doomemacs/issues/7997#issuecomment-2614452536
+(defun my/C-i ()
+  (when (display-graphic-p)
+    (key-translate "C-i" "H-i")))
+
+(my/C-i)
+(add-hook 'after-make-frame-functions
+          (lambda (frame)
+            (with-selected-frame frame (my/C-i))))
+
+(after! better-jumper
+  (keymap-global-set "H-i" #'better-jumper-jump-forward))
