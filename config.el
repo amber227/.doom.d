@@ -91,17 +91,39 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(load! "+aider")
 (load! "+evil")
 (load! "+git")
 (load! "+modeline")
 (load! "+nix")
+(load! "+python")
 (load! "+window")
 (load! "+tex")
+(load! "+lsp")
+(load! "+org")
 (load! "sioyek")
 (load! "splash")
 (load! "templates")
+(load! "+aider")
+
+(defun insert-char-to-kill-ring (character &optional count inherit)
+  "Like `insert-char', but push the character(s) to the kill ring instead of inserting.
+
+Interactively, prompt for CHARACTER the same way as `insert-char' does,
+and push a string of COUNT copies of it onto the kill ring.  Does not
+modify the current buffer."
+  (interactive
+   (list (read-char-by-name "Insert character (Unicode name or hex): ")
+         (prefix-numeric-value current-prefix-arg)
+         t))
+  (let ((n (or count 1)))
+    (when (> n 0)
+      (let ((s (make-string n character)))
+        (kill-new s)
+        s))))
 
 (setq doom-localleader-key "SPC r")
+(map! :leader
+  "o h" #'find-file)
 
-(direnv-mode)
+(envrc-global-mode)
+(doom/load-session "~/.local/share/doomemacs/etc/workspaces/layout_fresh")
