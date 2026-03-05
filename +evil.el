@@ -27,8 +27,8 @@
 (after! evil-snipe
   (setq evil-snipe-scope 'whole-buffer))
 
-(evil-snipe-def 1 'inclusive "t" "T")
-(evil-snipe-def 1 'exclusive "f" "F")
+(evil-snipe-def 1 'inclusive "f" "F")
+(evil-snipe-def 1 'exclusive "t" "T")
 
 ;; https://emacs.stackexchange.com/questions/8126/zs-and-ze-from-vim
 (defun hscroll-cursor-left ()

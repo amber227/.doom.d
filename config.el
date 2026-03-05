@@ -123,8 +123,10 @@ modify the current buffer."
 
 (setq doom-localleader-key "SPC r")
 (map! :leader
-  "o h" #'find-file
-  "i U" #'insert-char-to-kill-ring)
+  "i c" #'insert-char-to-kill-ring)
+
+(map! :n "C-S-v" #'evil-paste-after
+      :i "C-S-v" #'evil-paste-after)
 
 (envrc-global-mode)
 (doom/load-session "~/.local/share/doomemacs/etc/workspaces/layout_fresh")

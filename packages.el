@@ -48,10 +48,13 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
+(package! aider)
 (package! hydra)
-(package! direnv)
+(package! envrc)
 (package! auctex)
 (package! fanyi)
+(package! sphinx-doc)
+(package! lark-mode)
 (package! scihub :recipe (:host github :repo "emacs-pe/scihub.el"))
 
 ;; Themes
